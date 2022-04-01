@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask 1</title>
+
+
+
+    <style>
+        :root {
+            --main-color: grey;
+            --pane-padding: 5px 42px;
+            --primary-color: black;
+            --header-color: green;
+            --text-align: center;
+            --button :green;
+            --hover:lightgreen;
+        }
+
+        body {
+            background-color: var(--main-color);
+        }
+
+        h1 {
+            color: var(--header-color);
+            text-align: var(--text-align);
+        }
+        #btnSubmit {
+            background-color: var(--button);
+            border-radius:10px;
+        }
+        #btnSubmit:hover {
+            background-color: var(--hover);
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Flask Calculator</h1>
+    </header>
+
+    <main>
+        <section>
+
+            <form method="POST" action="http://localhost:5000/arith" novalidate>
+                <div>
+                    <label for="no1">Enter Number1</label>
+                    <input type="text" name="no1" size="20"><br><br>
+                    <div class="error"></div>
+                </div>
+
+                <div>
+                    <label for="no2">Enter Number2</label>
+                    <input type="text" name="no2" size="20"><br><br>
+                    <div class="error"></div>
+                </div>
+
+                <div>
+                    <label for="operation">Enter operator</label>
+                    <input type="text" id="opr" name="opr" size="20"><br><br>
+                    <div class="error"></div>
+                </div>
+
+                <input type="submit" id="btnSubmit" value="submit">
+            </form>
+
+        </section>
+    </main>
+
+
+    <footer>
+        <div class="footer">
+            <p class="copyright ">Ismail Khan &copy; <span id="current_date"></p>
+
+        </div>
+    </footer>
+</body>
+
+<script>
+    const d = new Date();
+    const getDate = d.getFullYear();
+    document.getElementById("current_date").innerText = getDate;
+
+
+    // // For Form Validation
+    // const btnSubmit = document.getElementById("btnsubmit")
+    // const no1 = document.getElementById("no1")
+    // const no2 = document.getElementById("no2")
+    // const opr = document.getElementById("opr")
+
+    // //adding evevnt listener
+    // btnSubmit.addEventListener("click",function(e){
+    //      //no1 
+
+    //      if(no1.value == ""){
+    //          no1.nextElementSibling.textContent = "Please enter value1 "
+    //          return false
+    //      }
+    //     else {
+    //         no1.nextElementSibling.textContent = ""
+    //     }
+
+    //     //no2
+    //     if(no2.value == ""){
+    //          no1.nextElementSibling.textContent = "Please enter value2"
+    //          return false
+    //      }
+    //     else {
+    //         no2.nextElementSibling.textContent = ""
+    //     }
+    //     //for operator 
+    //     if(opr.value ==""){
+    //         opr.nextElementSibling.textContent = "Please Enter Operator"
+    //         return false
+    //     }
+    //     else if(opr.value!='+' || opr.value!='-' || opr.value != '/' || opr.value != "%" || opr.value !="*" ){
+    //         opr.nextElementSibling.textContent = "Please Select Proper Operator"
+    //         return false
+    //     }
+    //     else {
+    //         opr.nextElementSibling.textContent = "";
+    //     }
+
+    //   if(false){
+    //       e.preventDefault();
+    //   }
+
+    // })
+</script>
+
+</html>
