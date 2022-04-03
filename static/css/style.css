@@ -1,1 +1,35 @@
-
+.container {
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 1, 1);
+    border-radius: 20px;
+    padding:20px 10px;
+    max-height: 100vh;
+    margin-top:30px;
+  }
+  h1 {
+      text-align: center;
+  }
+  .btn {
+      padding:10px 10px;
+      background-color: aquamarine;
+      border-radius: 20px;
+      border:1px outset groove;
+      display: block;
+      width:40%;
+      margin:0 auto 0 auto;
+    
+  }
+  .container .btn:hover {
+      background-color: darkcyan;
+      color:#fff;
+  }
+  .container #currency {
+      display: block;
+      margin-top:10px;
+    
+  }
+  .container .footer {
+      text-align: center;
+      font-size:2rem;
+  }

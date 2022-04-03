@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Convertor</title>
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css">
+    <style>
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><u>Currency Converter</u></h1>
+        <form method="POST" action="http://localhost:5000/currency" novalidate>
+            <label for="currency">Enter Currency</label>
+            <input type="text" id="currency" autocomplete="off" name="currency" placeholder="Enter Non Indian Currency">
+            <h3>To Rupees:</h3>
+            <input type="radio" id="us" name="country" value="us">
+            <label for="us">us</label><br>
+            <input type="radio" id="css" name="country" value="uae">
+            <label for="uae">uae</label><br>
+            <input type="radio" id="euro" name="country" value="euro">
+            <label for="euro">euro</label>
+
+
+            <button type="submit" class="btn">Convert</button>
+        </form>
+        <div class="footer">
+            <p>Copyright &copy; 2022</p>
+        </div>
+
+    </div>
+</body>
+
+
+
+</html>
